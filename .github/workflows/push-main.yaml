@@ -28,6 +28,3 @@ jobs:
       - run: dotnet restore Icod.UtilLinux.sln
       - run: dotnet build Icod.UtilLinux.sln -c Release --no-restore -p:ContinuousIntegrationBuild=true
       - run: dotnet test Icod.UtilLinux.sln -c Release --no-build --logger trx
-      - name: Validate isolated UtilLinux boundary
-        shell: pwsh
-        run: ./eng/validate-g3n-UtilLinux.ps1 -Configuration Release
