@@ -80,9 +80,9 @@ On Linux, the implementation uses `/proc`, native signal APIs, and pidfd syscall
 
 ## AUTHORS
 
-Inspired by original work from the util-linux project and its contributors.
+Inspired by original work from the BSD 4.0 and The Regents of the University of California, and the util-linux project and its contributors.
 
-Migrated to .Net by Timothy J. Bruce.
+Migrated to .Net by Timothy J. Bruce <uniblab@hotmail.com>.
 
 ## COPYRIGHT
 
