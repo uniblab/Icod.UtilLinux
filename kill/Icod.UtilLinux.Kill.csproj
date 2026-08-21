@@ -10,7 +10,7 @@
 		<OutputPath>..\bin\$(Configuration)\</OutputPath>
 		<AssemblyName>kill</AssemblyName>
 		<RootNamespace>Icod.UtilLinux.Kill</RootNamespace>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(PlatformTarget)' == '' ">
 		<PlatformTarget>AnyCPU</PlatformTarget>
