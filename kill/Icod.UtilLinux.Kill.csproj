@@ -46,4 +46,19 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<WarningsNotAsErrors>CS1591</WarningsNotAsErrors>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="README.md">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>$(AssemblyName).README.md</TargetPath>
+			<Pack>true</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+
+		<Content Include="kill.LICENSE.txt">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Pack>true</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+	</ItemGroup>
 </Project>
