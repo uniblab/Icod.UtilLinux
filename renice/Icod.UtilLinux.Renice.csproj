@@ -55,8 +55,9 @@
 			<PackagePath>\</PackagePath>
 		</Content>
 
-		<Content Include="renice.LICENSE.txt">
+		<Content Include="LICENSE">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>$(AssemblyName).LICENSE.txt</TargetPath>
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
