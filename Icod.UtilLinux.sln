@@ -6,9 +6,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icod.UtilLinux.Kill", "kill
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icod.UtilLinux.Renice", "renice\Icod.UtilLinux.Renice.csproj", "{9A73B8A1-A66A-4B6C-BD8F-0468751D6240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icod.UtilLinux.Kill.Tests", "tests\Kill.Tests\Icod.UtilLinux.Kill.Tests.csproj", "{BC50FB1A-C7E6-4A29-83C4-9C8E38B39008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Icod.UtilLinux.Kill.Tests", "tests\Kill.Tests\Icod.UtilLinux.Kill.Tests.csproj", "{BC50FB1A-C7E6-4A29-83C4-9C8E38B39008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icod.UtilLinux.Renice.Tests", "tests\Renice.Tests\Icod.UtilLinux.Renice.Tests.csproj", "{F3E27F13-2A53-4C79-ADCF-A666C3FE2357}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Icod.UtilLinux.Renice.Tests", "tests\Renice.Tests\Icod.UtilLinux.Renice.Tests.csproj", "{F3E27F13-2A53-4C79-ADCF-A666C3FE2357}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
