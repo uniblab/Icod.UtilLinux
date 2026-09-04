@@ -60,10 +60,8 @@ if (0 -le $ExpectedPackageCount -and $ExpectedPackageCount -ne $packages.Count) 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 foreach ($package in $packages) {
     $metadata = Get-PackageMetadata -PackagePath $package.FullName
-    if (
-        -not [string]::IsNullOrWhiteSpace($ExpectedPackageId)
-        -and $metadata.Id -ne $ExpectedPackageId
-    ) {
+    $hasExpectedPackageId = -not [string]::IsNullOrWhiteSpace($ExpectedPackageId)
+    if ($hasExpectedPackageId -and $metadata.Id -ne $ExpectedPackageId) {
         throw "Package '$($package.Name)' has ID '$($metadata.Id)'; expected '$ExpectedPackageId'."
     }
 
