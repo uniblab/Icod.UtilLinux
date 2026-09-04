@@ -10,7 +10,7 @@
 		<OutputPath>..\bin\$(Configuration)\</OutputPath>
 		<AssemblyName>renice</AssemblyName>
 		<RootNamespace>Icod.UtilLinux.Renice</RootNamespace>
-		<Version>1.0.1</Version>
+		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(PlatformTarget)' == '' ">
 		<PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,7 +47,6 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<WarningsNotAsErrors>CS1591</WarningsNotAsErrors>
 	</PropertyGroup>
-
 	<ItemGroup>
 		<Content Include="README.md">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -55,7 +54,6 @@
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-
 		<Content Include="LICENSE">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<TargetPath>$(AssemblyName).LICENSE.txt</TargetPath>
