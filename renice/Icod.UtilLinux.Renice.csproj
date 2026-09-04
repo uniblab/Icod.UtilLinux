@@ -10,6 +10,7 @@
 		<OutputPath>..\bin\$(Configuration)\</OutputPath>
 		<AssemblyName>renice</AssemblyName>
 		<RootNamespace>Icod.UtilLinux.Renice</RootNamespace>
+		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(PlatformTarget)' == '' ">
 		<PlatformTarget>AnyCPU</PlatformTarget>
