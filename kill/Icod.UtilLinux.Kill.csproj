@@ -10,7 +10,6 @@
 		<OutputPath>..\bin\$(Configuration)\</OutputPath>
 		<AssemblyName>kill</AssemblyName>
 		<RootNamespace>Icod.UtilLinux.Kill</RootNamespace>
-		<Version>1.0.1</Version>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(PlatformTarget)' == '' ">
 		<PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,7 +46,6 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<WarningsNotAsErrors>CS1591</WarningsNotAsErrors>
 	</PropertyGroup>
-
 	<ItemGroup>
 		<Content Include="README.md">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -55,7 +53,6 @@
 			<Pack>true</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
-
 		<Content Include="LICENSE">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<TargetPath>$(AssemblyName).LICENSE.txt</TargetPath>
