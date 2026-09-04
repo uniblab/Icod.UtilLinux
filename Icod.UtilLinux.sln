@@ -6,9 +6,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icod.UtilLinux.Kill", "kill
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icod.UtilLinux.Renice", "renice\Icod.UtilLinux.Renice.csproj", "{9A73B8A1-A66A-4B6C-BD8F-0468751D6240}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Icod.UtilLinux.Router", "utillinux\Icod.UtilLinux.Router.csproj", "{6E7A0D56-E8B0-4A7C-AE6B-9D7BDA5B3B5F}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Icod.UtilLinux.Kill.Tests", "tests\Kill.Tests\Icod.UtilLinux.Kill.Tests.csproj", "{BC50FB1A-C7E6-4A29-83C4-9C8E38B39008}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Icod.UtilLinux.Renice.Tests", "tests\Renice.Tests\Icod.UtilLinux.Renice.Tests.csproj", "{F3E27F13-2A53-4C79-ADCF-A666C3FE2357}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Icod.UtilLinux.Router.Tests", "tests\Router.Tests\Icod.UtilLinux.Router.Tests.csproj", "{A1E08B21-7D77-4555-BF9D-9D54A453D1C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -31,6 +35,12 @@ Global
 		{9A73B8A1-A66A-4B6C-BD8F-0468751D6240}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A73B8A1-A66A-4B6C-BD8F-0468751D6240}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
 		{9A73B8A1-A66A-4B6C-BD8F-0468751D6240}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{6E7A0D56-E8B0-4A7C-AE6B-9D7BDA5B3B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7A0D56-E8B0-4A7C-AE6B-9D7BDA5B3B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7A0D56-E8B0-4A7C-AE6B-9D7BDA5B3B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7A0D56-E8B0-4A7C-AE6B-9D7BDA5B3B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7A0D56-E8B0-4A7C-AE6B-9D7BDA5B3B5F}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{6E7A0D56-E8B0-4A7C-AE6B-9D7BDA5B3B5F}.Staging|Any CPU.Build.0 = Staging|Any CPU
 		{BC50FB1A-C7E6-4A29-83C4-9C8E38B39008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC50FB1A-C7E6-4A29-83C4-9C8E38B39008}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC50FB1A-C7E6-4A29-83C4-9C8E38B39008}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,6 +53,12 @@ Global
 		{F3E27F13-2A53-4C79-ADCF-A666C3FE2357}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F3E27F13-2A53-4C79-ADCF-A666C3FE2357}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
 		{F3E27F13-2A53-4C79-ADCF-A666C3FE2357}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{A1E08B21-7D77-4555-BF9D-9D54A453D1C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E08B21-7D77-4555-BF9D-9D54A453D1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E08B21-7D77-4555-BF9D-9D54A453D1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E08B21-7D77-4555-BF9D-9D54A453D1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E08B21-7D77-4555-BF9D-9D54A453D1C2}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{A1E08B21-7D77-4555-BF9D-9D54A453D1C2}.Staging|Any CPU.Build.0 = Staging|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +66,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BC50FB1A-C7E6-4A29-83C4-9C8E38B39008} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{F3E27F13-2A53-4C79-ADCF-A666C3FE2357} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A1E08B21-7D77-4555-BF9D-9D54A453D1C2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 EndGlobal
