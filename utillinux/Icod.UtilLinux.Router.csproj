@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net10.0</TargetFramework>
+		<LangVersion>13.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<OutputPath>..\bin\$(Configuration)\</OutputPath>
+		<AssemblyName>utillinux</AssemblyName>
+		<RootNamespace>Icod.UtilLinux.Router</RootNamespace>
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>utillinux</ToolCommandName>
+		<PackageId>Icod.UtilLinux.Tools</PackageId>
+		<Authors>Timothy J. Bruce</Authors>
+		<Description>Managed command router for the Icod.UtilLinux kill and renice tools.</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+		<PackageTags>dotnet;csharp;util-linux;linux;unix;command-line;cli;terminal;kill;renice;process;process-control;cross-platform;windows;macos</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\kill\Icod.UtilLinux.Kill.csproj" />
+		<ProjectReference Include="..\renice\Icod.UtilLinux.Renice.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="..\README.md" Link="README.md" Pack="true" PackagePath="\" />
+		<Content Include="..\LICENSE" Link="LICENSE" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<WarningLevel>2</WarningLevel>
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Staging' ">
+		<WarningLevel>3</WarningLevel>
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<DefineConstants>TRACE</DefineConstants>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<WarningLevel>4</WarningLevel>
+		<DebugType>portable</DebugType>
+		<Optimize>true</Optimize>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<WarningsNotAsErrors>CS1591</WarningsNotAsErrors>
+	</PropertyGroup>
+</Project>
