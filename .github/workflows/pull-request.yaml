@@ -6,11 +6,14 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
+
 permissions:
   contents: read
+
 env:
   DOTNET_VERSION: 10.0.x
   CONFIGURATION: Staging
+
 jobs:
   metadata:
     runs-on: ubuntu-latest
@@ -24,7 +27,11 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
       - id: repository
         shell: pwsh
-        run: ./packaging/Get-RepositoryMetadata.ps1 -Configuration '${{ env.CONFIGURATION }}' -GitHubOutputPath $env:GITHUB_OUTPUT
+        run: >-
+          ./packaging/Get-RepositoryMetadata.ps1
+          -Configuration '${{ env.CONFIGURATION }}'
+          -GitHubOutputPath $env:GITHUB_OUTPUT
+
   validate:
     needs: metadata
     if: needs.metadata.outputs.has_solution == 'true'
@@ -32,9 +39,15 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - { os: windows-latest, name: Windows, verify_packages: false }
-          - { os: ubuntu-latest, name: Linux, verify_packages: true }
-          - { os: macos-latest, name: macOS, verify_packages: false }
+          - os: windows-latest
+            name: Windows
+            verify_packages: false
+          - os: ubuntu-latest
+            name: Linux
+            verify_packages: true
+          - os: macos-latest
+            name: macOS
+            verify_packages: false
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     steps:
@@ -45,13 +58,33 @@ jobs:
       - name: Restore
         run: dotnet restore '${{ needs.metadata.outputs.solution_path }}'
       - name: Build
-        run: dotnet build '${{ needs.metadata.outputs.solution_path }}' -c ${{ env.CONFIGURATION }} --no-restore -p:ContinuousIntegrationBuild=true
+        run: >-
+          dotnet build '${{ needs.metadata.outputs.solution_path }}'
+          -c ${{ env.CONFIGURATION }}
+          --no-restore
+          -p:ContinuousIntegrationBuild=true
       - name: Test
-        run: dotnet test '${{ needs.metadata.outputs.solution_path }}' -c ${{ env.CONFIGURATION }} --no-build --no-restore --logger trx
+        run: >-
+          dotnet test '${{ needs.metadata.outputs.solution_path }}'
+          -c ${{ env.CONFIGURATION }}
+          --no-build
+          --no-restore
+          --logger trx
       - name: Pack Staging artifacts
         if: matrix.verify_packages
-        run: dotnet pack '${{ needs.metadata.outputs.solution_path }}' -c ${{ env.CONFIGURATION }} --no-build --no-restore -o artifacts -p:ContinuousIntegrationBuild=true
+        run: >-
+          dotnet pack '${{ needs.metadata.outputs.solution_path }}'
+          -c ${{ env.CONFIGURATION }}
+          --no-build
+          --no-restore
+          -o artifacts
+          -p:ContinuousIntegrationBuild=true
       - name: Verify exact Staging package artifacts
         if: matrix.verify_packages
         shell: pwsh
-        run: ./packaging/VerifyPackageArtifact.ps1 -ArtifactDirectory artifacts -Configuration '${{ env.CONFIGURATION }}' -AllowNoPackages
+        run: >-
+          ./packaging/VerifyPackageArtifact.ps1
+          -ArtifactDirectory artifacts
+          -Configuration '${{ env.CONFIGURATION }}'
+          -ExpectedPackageId 'Icod.UtilLinux.Tools'
+          -ExpectedPackageCount 1
